@@ -7,7 +7,6 @@ class ApiWrapper
   def self.sendmsg(channel, msg)
     url = BASE_URL + "chat.postMessage?" + "token=#{TOKEN}" + "&text=#{msg}&channel=#{channel}" 
     data = HTTParty.post(url)
-    raise
   end
 
   def self.listchannels()
